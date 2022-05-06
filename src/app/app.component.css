@@ -1,0 +1,38 @@
+/* .sidenav-left {
+    background-color: gray;
+    height: 100vh;
+    position: fixed;
+    transition: all 0.2s linear 0s;
+    transform: translateX(0%);
+}
+.gutter-x {
+    --bs-gutter-x: 0;
+}
+
+.content-right-top {
+    background-color: aqua;
+    height: 50px;
+}
+
+.content-right {
+    background-color: brown;
+    height: 100vh;
+}
+
+.fixed-right-top {
+    position: fixed;
+    z-index: 1030;
+}
+
+.fixed-right {
+    position: fixed;
+} */
+
+
+#body-row {
+    margin-left:0;
+    margin-right:0;
+}
+.gutter-x {
+    --bs-gutter-x: 0;
+}
