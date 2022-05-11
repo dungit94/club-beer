@@ -1,0 +1,49 @@
+<div class="card">
+    <h4 class="card-header">Category list</h4>
+    <div class="card-body">
+      <button type="button" class="btn btn-outline-primary mb-2 float-end" routerLink="create">
+        Create
+      </button>
+      <table class="table">
+        <thead class="table-dark">
+          <tr>
+            <td>NO</td>
+            <td>NAME</td>
+            <td>CODE</td>
+            <td>STATUS</td>
+            <td>ACTION</td>
+          </tr>
+        </thead>
+        <tbody>
+          <tr *ngFor= "let category of categories; trackBy: trackId; index as i">
+            <td>{{category.id}}</td>
+            <td>{{category.name}}</td>
+            <td>{{category.code}}</td>
+            <td>{{category.status}}</td>
+            <td>
+              <a 
+              routerLink="edit/{{category.id}}" 
+              class="btn btn-outline-primary me-2">Edit</a>
+              <button (click)="open(content, category.id)" type="button" class="btn btn-outline-danger">Delete</button>
+            </td>
+          </tr>
+        </tbody>
+      </table>
+    </div>
+  </div>
+
+<ng-template #content let-c="close" let-d="dismiss">    
+    <div class="modal-header">    
+        <h4 class="modal-title" id="modal-basic-title">Confirmation</h4>    
+        <button type="button" class="close" aria-label="Close" (click)="d('Cross click')">    
+            <span aria-hidden="true">×</span>    
+        </button>    
+    </div>    
+    <div class="modal-body">    
+        <p>Are you sure to delete this?</p>    
+    </div>    
+    <div class="modal-footer">    
+        <button type="button" class="btn btn-outline-dark" (click)="d('Cross click')">Cancel</button>    
+        <button type="button" class="btn btn-outline-danger" (click)="c('yes')">Yes</button>    
+    </div>    
+</ng-template>

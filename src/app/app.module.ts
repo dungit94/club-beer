@@ -11,6 +11,12 @@ import { BeerComponent } from './beer/beer.component';
 import { ManufacturerComponent } from './manufacturer/manufacturer.component';
 import { NgbModule } from '@ng-bootstrap/ng-bootstrap';
 import { SidebarComponent } from './sidebar/sidebar.component';
+import { ReactiveFormsModule } from '@angular/forms';
+import { CreateComponent } from './category/create/create.component';
+import { EditComponent } from './category/edit/edit.component';
+import { DetailComponent } from './category/detail/detail.component';
+import { ListComponent } from './category/list/list.component';
+import { HttpClientModule } from '@angular/common/http';
 
 @NgModule({
   declarations: [
@@ -21,12 +27,18 @@ import { SidebarComponent } from './sidebar/sidebar.component';
     CountryComponent,
     BeerComponent,
     ManufacturerComponent,
-    SidebarComponent
+    SidebarComponent,
+    CreateComponent,
+    EditComponent,
+    DetailComponent,
+    ListComponent
   ],
   imports: [
     BrowserModule,
     AppRoutingModule,
-    NgbModule
+    NgbModule,
+    ReactiveFormsModule,
+    HttpClientModule,
   ],
   providers: [],
   bootstrap: [AppComponent]
